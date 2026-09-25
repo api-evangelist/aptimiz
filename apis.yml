@@ -1,23 +1,80 @@
 aid: aptimiz
+
 name: Aptimiz
-description: 'Aptimiz is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Aptimiz provides digital solutions for agricultural time‑tracking and farm management, offering connected devices and software to
+  monitor labor, equipment, traceability, and crop activities. Their platform helps growers optimize operations, ensure regulatory compliance,
+  and improve decision‑making through real‑time data.
+
 url: https://raw.githubusercontent.com/api-evangelist/aptimiz/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
-- Company
-apis: []
+- Agriculture
+- Farm Management
+- Time Tracking
+- Connected Devices
+- Compliance
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Vendors
+  url: vendors/aptimiz-vendors.yml
+- type: Hosts
+  url: hosts/aptimiz-hosts.yml
+- type: Documentation
+  url: https://dev.aptimiz.com/
+- type: DomainSecurity
+  url: security/aptimiz-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aptimiz
+  url: https://aptimiz.com
+- type: GettingStarted
+  url: https://aptimiz.com/a-propos/
+- type: Support
+  url: https://aptimiz.com/contact/
+- type: Pricing
+  url: https://aptimiz.com/prerequis-techniques/
+- type: TermsOfService
+  url: https://aptimiz.com/cgv/
+- type: PrivacyPolicy
+  url: https://aptimiz.com/politique-de-confidentialite/
+
+apis:
+- name: Aptimiz API
+  description: Aptimiz provides digital solutions for agricultural time‑tracking and farm management. Documentation is available at the website
+    but no machine‑readable contract was found.
+  humanURL: https://aptimiz.com
+  baseURL: null
+  aid: aptimiz:aptimiz-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation pages are HTML only and no OpenAPI/AsyncAPI/GraphQL contract could be located.
+  evidence:
+  - url: https://aptimiz.com
+    status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
