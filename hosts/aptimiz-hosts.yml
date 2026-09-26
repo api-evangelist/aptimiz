@@ -73,10 +73,13 @@ hosts:
   - docs-index
   - contract-discovery
   - well-known
+  - vendor-detect
   types:
   - Documentation
   serves:
   - docs
+  - cdn
+  vendor: cloudflare
   registrable_domain: aptimiz.com
   role: docs
   relation: own
